@@ -22,26 +22,12 @@
       align-items: center;
       text-align: center;
       padding: 20px;
-      overflow: hidden;
     }
 
     .container {
       animation: float 4s ease-in-out infinite;
       max-width: 500px;
-    }
-
-    h1 {
-      font-size: 3.2rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: #ffffff;
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    p {
-      font-size: 1.1rem;
-      margin-top: 0.5rem;
-      color: #d1d1d1;
+      width: 100%;
     }
 
     .planet {
@@ -52,6 +38,20 @@
       box-shadow: 0 0 40px rgba(255, 136, 77, 0.8);
       margin: 0 auto 30px;
       animation: rotate 8s linear infinite;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #ffffff;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      color: #d1d1d1;
     }
 
     .info-btn {
@@ -95,11 +95,11 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="planet"></div>
-    <h1>Coming Soon...</h1>
-    <p>We're launching something awesome in space. Stay tuned!</p>
-    <a class="info-btn" href="https://silver-space-halibut-g444pv65q66qfp97v-3000.app.github.dev/" target="_blank" rel="noopener noreferrer">Temp Panel</a>
-  </div>
+  <main class="container" role="main" aria-label="Coming Soon Section">
+    <div class="planet" aria-hidden="true"></div>
+    <h1>We're Launching Soon</h1>
+    <p>Our official site is under development. Meanwhile, you can access the temporary panel below.</p>
+    <a class="info-btn" href="https://jhw7k7-3000.csb.app/login" target="_blank" rel="noopener noreferrer">Visit Temp Panel</a>
+  </main>
 </body>
 </html>
