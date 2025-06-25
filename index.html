@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -13,77 +14,65 @@
 
     body {
       height: 100vh;
-      background: linear-gradient(to bottom, #1a1a2e, #16213e);
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
       color: #f5f5f5;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-family: 'Poppins', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
+      text-align: center;
+      padding: 20px;
       overflow: hidden;
     }
 
     .container {
-      text-align: center;
       animation: float 4s ease-in-out infinite;
+      max-width: 500px;
     }
 
     h1 {
-      font-size: 3rem;
-      text-shadow: 2px 2px 5px #000;
+      font-size: 3.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #ffffff;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
     }
 
     p {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      color: #ccc;
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      color: #d1d1d1;
     }
 
     .planet {
-      width: 150px;
-      height: 150px;
+      width: 160px;
+      height: 160px;
       background: radial-gradient(circle at 30% 30%, #ffcc70, #ff884d);
       border-radius: 50%;
-      box-shadow: 0 0 30px rgba(255, 136, 77, 0.7);
-      margin: 0 auto 20px;
-      animation: rotate 6s linear infinite;
+      box-shadow: 0 0 40px rgba(255, 136, 77, 0.8);
+      margin: 0 auto 30px;
+      animation: rotate 8s linear infinite;
     }
 
     .info-btn {
-      margin-top: 20px;
-      padding: 10px 20px;
+      margin-top: 30px;
+      padding: 12px 28px;
       font-size: 1rem;
+      font-weight: 500;
       background-color: #ff884d;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       color: #fff;
       cursor: pointer;
-      box-shadow: 0 0 10px rgba(255, 136, 77, 0.5);
-      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 4px 15px rgba(255, 136, 77, 0.4);
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
     .info-btn:hover {
       background-color: #ff6a1f;
-    }
-
-    .panel {
-      margin-top: 20px;
-      background-color: rgba(255, 255, 255, 0.1);
-      border: 1px solid #ccc;
-      padding: 15px 20px;
-      border-radius: 10px;
-      display: none;
-      animation: fadeIn 0.5s ease forwards;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      transform: translateY(-2px);
     }
 
     @keyframes float {
@@ -91,7 +80,7 @@
         transform: translateY(0);
       }
       50% {
-        transform: translateY(-15px);
+        transform: translateY(-12px);
       }
     }
 
@@ -109,19 +98,8 @@
   <div class="container">
     <div class="planet"></div>
     <h1>Coming Soon...</h1>
-    <p>We're launching something awesome in space!</p>
-    <button class="info-btn" onclick="togglePanel()">Temp Panel</button>
-    <div class="panel" id="infoPanel">
-      🚀 Stay tuned for our intergalactic launch!<br />
-      Follow us on social media for updates.
-    </div>
+    <p>We're launching something awesome in space. Stay tuned!</p>
+    <a class="info-btn" href="https://yourdomain.com/temp-panel" target="_blank" rel="noopener noreferrer">Temp Panel</a>
   </div>
-
-  <script>
-    function togglePanel() {
-      const panel = document.getElementById('infoPanel');
-      panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
 </body>
 </html>
