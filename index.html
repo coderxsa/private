@@ -48,6 +48,44 @@
       animation: rotate 6s linear infinite;
     }
 
+    .info-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #ff884d;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255, 136, 77, 0.5);
+      transition: background-color 0.3s ease;
+    }
+
+    .info-btn:hover {
+      background-color: #ff6a1f;
+    }
+
+    .panel {
+      margin-top: 20px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid #ccc;
+      padding: 15px 20px;
+      border-radius: 10px;
+      display: none;
+      animation: fadeIn 0.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     @keyframes float {
       0%, 100% {
         transform: translateY(0);
@@ -72,6 +110,18 @@
     <div class="planet"></div>
     <h1>Coming Soon...</h1>
     <p>We're launching something awesome in space!</p>
+    <button class="info-btn" onclick="togglePanel()">Temp Panel</button>
+    <div class="panel" id="infoPanel">
+      🚀 Stay tuned for our intergalactic launch!<br />
+      Follow us on social media for updates.
+    </div>
   </div>
+
+  <script>
+    function togglePanel() {
+      const panel = document.getElementById('infoPanel');
+      panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>
