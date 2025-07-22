@@ -25,53 +25,50 @@
     }
 
     .container {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      align-items: center;
       width: 100%;
-      max-width: 260px;
+      max-width: 300px;
       padding: 12px;
     }
 
-    .card {
-      background: rgba(20, 20, 24, 0.7);
+    .dropdown {
+      margin-bottom: 10px;
       border: 1px solid rgba(0, 255, 191, 0.08);
       border-radius: 10px;
-      padding: 12px 10px;
+      background: rgba(20, 20, 24, 0.7);
       box-shadow: 0 0 12px rgba(0, 255, 191, 0.08);
       backdrop-filter: blur(6px);
-      width: 100%;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
-      text-decoration: none;
-      color: #ffffff;
+      overflow: hidden;
+      transition: all 0.3s ease;
     }
 
-    .card:hover {
-      transform: translateY(-3px) scale(1.01);
-      box-shadow: 0 0 18px rgba(0, 255, 191, 0.2);
-      border-color: rgba(0, 255, 191, 0.3);
-    }
-
-    .card h2 {
-      margin-bottom: 4px;
-      font-size: 0.95em;
+    .dropdown-header {
+      padding: 10px 14px;
+      cursor: pointer;
       background: linear-gradient(to right, #00ffc3, #00cba9, #00ffc3);
       background-size: 200% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: gradient-text 5s linear infinite;
+      font-weight: bold;
+      font-size: 0.95em;
     }
 
-    @keyframes gradient-text {
-      to { background-position: 200% center; }
+    .dropdown-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 14px;
     }
 
-    .card p {
+    .dropdown.active .dropdown-content {
+      max-height: 100px;
+      padding-bottom: 10px;
+    }
+
+    .dropdown p {
       font-size: 0.75em;
       color: #bbb;
-      margin: 2px 0 10px;
+      margin: 4px 0;
     }
 
     .button {
@@ -82,19 +79,25 @@
       border-radius: 6px;
       font-weight: 600;
       font-size: 0.75em;
+      margin-top: 6px;
       text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
-      transition: all 0.2s ease-in-out;
       box-shadow: 0 0 4px rgba(0, 255, 179, 0.2);
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
     }
 
-    .card:hover .button {
+    .button:hover {
       background: linear-gradient(135deg, #00e6b2, #007d71);
       box-shadow: 0 0 8px rgba(0, 255, 179, 0.4);
       transform: scale(1.04);
     }
 
+    @keyframes gradient-text {
+      to { background-position: 200% center; }
+    }
+
     @media (max-width: 400px) {
-      .card h2 {
+      .dropdown-header {
         font-size: 0.9em;
       }
 
@@ -108,30 +111,52 @@
 <body>
 
   <div class="container">
-    <a href="/" class="card" target="_blank">
-      <h2>🤖 WhatsApp Bot Panel</h2>
-      <p>Manage your WA bot in one click!</p>
-      <div class="button">💻 Open Panel</div>
-    </a>
 
-    <a href="https://t.me/vipbotwa_bot" class="card" target="_blank">
-      <h2>👑 Telegram VIP Bot</h2>
-      <p>Grab OneView content in one tap.</p>
-      <div class="button">🌟 Start Access</div>
-    </a>
+    <div class="dropdown">
+      <div class="dropdown-header">🤖 WhatsApp Bot Panel</div>
+      <div class="dropdown-content">
+        <p>Manage your WA bot in one click!</p>
+        <a href="/" target="_blank" class="button">💻 Open Panel</a>
+      </div>
+    </div>
 
-    <a href="https://t.me/host_cryptalis_bot" class="card" target="_blank">
-      <h2>📲 WA Bot Rental</h2>
-      <p>Rent bots easily & instantly!</p>
-      <div class="button">📦 Rent Now</div>
-    </a>
+    <div class="dropdown">
+      <div class="dropdown-header">👑 Telegram VIP Bot</div>
+      <div class="dropdown-content">
+        <p>Grab OneView content in one tap.</p>
+        <a href="https://t.me/vipbotwa_bot" target="_blank" class="button">🌟 Start Access</a>
+      </div>
+    </div>
 
-    <a href="https://t.me/fnbots_bot" class="card" target="_blank">
-      <h2>🎮 FN Bot Rental</h2>
-      <p>Dominate with FN bots!</p>
-      <div class="button">💼 Rent Bot</div>
-    </a>
+    <div class="dropdown">
+      <div class="dropdown-header">📲 WA Bot Rental</div>
+      <div class="dropdown-content">
+        <p>Rent bots easily & instantly!</p>
+        <a href="https://t.me/host_cryptalis_bot" target="_blank" class="button">📦 Rent Now</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <div class="dropdown-header">🎮 FN Bot Rental</div>
+      <div class="dropdown-content">
+        <p>Dominate with FN bots!</p>
+        <a href="https://t.me/fnbots_bot" target="_blank" class="button">💼 Rent Bot</a>
+      </div>
+    </div>
+
   </div>
+
+  <script>
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(drop => {
+      drop.querySelector('.dropdown-header').addEventListener('click', () => {
+        dropdowns.forEach(d => {
+          if (d !== drop) d.classList.remove('active');
+        });
+        drop.classList.toggle('active');
+      });
+    });
+  </script>
 
 </body>
 </html>
