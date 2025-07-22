@@ -27,44 +27,36 @@
     .container {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 6px;
       align-items: center;
       width: 100%;
-      max-width: 380px;
-      padding: 20px;
+      max-width: 260px;
+      padding: 12px;
     }
 
     .card {
       background: rgba(20, 20, 24, 0.7);
-      border: 1px solid rgba(0, 255, 191, 0.1);
-      border-radius: 14px;
-      padding: 24px 18px;
-      box-shadow: 0 0 20px rgba(0, 255, 191, 0.1);
-      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0, 255, 191, 0.08);
+      border-radius: 10px;
+      padding: 12px 10px;
+      box-shadow: 0 0 12px rgba(0, 255, 191, 0.08);
+      backdrop-filter: blur(6px);
       width: 100%;
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
       text-decoration: none;
       color: #ffffff;
-      position: relative;
     }
 
     .card:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 0 30px rgba(0, 255, 191, 0.3);
-      border-color: rgba(0, 255, 191, 0.4);
-      animation: pulse 1s ease-in-out;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1.02); }
-      50% { transform: scale(1.025); }
-      100% { transform: scale(1.02); }
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: 0 0 18px rgba(0, 255, 191, 0.2);
+      border-color: rgba(0, 255, 191, 0.3);
     }
 
     .card h2 {
-      margin-bottom: 10px;
-      font-size: 1.3em;
+      margin-bottom: 4px;
+      font-size: 0.95em;
       background: linear-gradient(to right, #00ffc3, #00cba9, #00ffc3);
       background-size: 200% auto;
       -webkit-background-clip: text;
@@ -77,38 +69,38 @@
     }
 
     .card p {
-      font-size: 0.9em;
+      font-size: 0.75em;
       color: #bbb;
-      margin: 6px 0 16px;
+      margin: 2px 0 10px;
     }
 
     .button {
       display: inline-block;
-      padding: 8px 16px;
+      padding: 4px 10px;
       background: linear-gradient(135deg, #00ffc3, #009688);
       color: #000;
-      border-radius: 10px;
+      border-radius: 6px;
       font-weight: 600;
-      font-size: 0.95em;
-      text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-      transition: all 0.25s ease-in-out;
-      box-shadow: 0 0 8px rgba(0, 255, 179, 0.25);
+      font-size: 0.75em;
+      text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease-in-out;
+      box-shadow: 0 0 4px rgba(0, 255, 179, 0.2);
     }
 
     .card:hover .button {
       background: linear-gradient(135deg, #00e6b2, #007d71);
-      box-shadow: 0 0 14px rgba(0, 255, 179, 0.5);
-      transform: scale(1.05);
+      box-shadow: 0 0 8px rgba(0, 255, 179, 0.4);
+      transform: scale(1.04);
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 400px) {
       .card h2 {
-        font-size: 1.2em;
+        font-size: 0.9em;
       }
 
       .button {
-        font-size: 0.9em;
-        padding: 8px 14px;
+        font-size: 0.7em;
+        padding: 4px 8px;
       }
     }
   </style>
@@ -118,25 +110,25 @@
   <div class="container">
     <a href="/" class="card" target="_blank">
       <h2>🤖 WhatsApp Bot Panel</h2>
-      <p>🚀 Manage your hosted WhatsApp bot in one click!</p>
+      <p>Manage your WA bot in one click!</p>
       <div class="button">💻 Open Panel</div>
     </a>
 
     <a href="https://t.me/vipbotwa_bot" class="card" target="_blank">
       <h2>👑 Telegram VIP Bot</h2>
-      <p>💬 Premium power — secretly grab OneView content in one tap.</p>
-      <div class="button">🌟 Start VIP Access</div>
+      <p>Grab OneView content in one tap.</p>
+      <div class="button">🌟 Start Access</div>
     </a>
 
     <a href="https://t.me/host_cryptalis_bot" class="card" target="_blank">
-      <h2>📲 WhatsApp Bot Rental</h2>
-      <p>📞 Need WA bots? Rent them now!</p>
-      <div class="button">📦 Rent Nebula</div>
+      <h2>📲 WA Bot Rental</h2>
+      <p>Rent bots easily & instantly!</p>
+      <div class="button">📦 Rent Now</div>
     </a>
 
     <a href="https://t.me/fnbots_bot" class="card" target="_blank">
-      <h2>🎮 Fortnite Bot Rental</h2>
-      <p>🚀 Dominate the island with FN bots!</p>
+      <h2>🎮 FN Bot Rental</h2>
+      <p>Dominate with FN bots!</p>
       <div class="button">💼 Rent Bot</div>
     </a>
   </div>
