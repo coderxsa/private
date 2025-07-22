@@ -12,138 +12,134 @@
       background: linear-gradient(135deg, #0b0b0d, #16161a);
       color: #fff;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      gap: 20px;
-      overflow: hidden;
       background-attachment: fixed;
       animation: bgMove 30s linear infinite;
     }
-  
+
     @keyframes bgMove {
       0% { background-position: 0 0; }
       100% { background-position: 100% 100%; }
     }
-  
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      width: 100%;
+      max-width: 380px;
+      padding: 20px;
+    }
+
     .card {
       background: rgba(20, 20, 24, 0.7);
       border: 1px solid rgba(0, 255, 191, 0.1);
-      border-radius: 16px;
-      padding: 28px 22px;
+      border-radius: 14px;
+      padding: 24px 18px;
       box-shadow: 0 0 20px rgba(0, 255, 191, 0.1);
       backdrop-filter: blur(10px);
-      max-width: 340px;
-      width: 88%;
+      width: 100%;
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
       text-decoration: none;
       color: #ffffff;
       position: relative;
-      overflow: hidden;
     }
-  
+
     .card:hover {
-      transform: translateY(-6px) scale(1.03);
+      transform: translateY(-5px) scale(1.02);
       box-shadow: 0 0 30px rgba(0, 255, 191, 0.3);
       border-color: rgba(0, 255, 191, 0.4);
       animation: pulse 1s ease-in-out;
     }
-  
+
     @keyframes pulse {
-      0% { transform: scale(1.03); }
-      50% { transform: scale(1.035); }
-      100% { transform: scale(1.03); }
+      0% { transform: scale(1.02); }
+      50% { transform: scale(1.025); }
+      100% { transform: scale(1.02); }
     }
-  
+
     .card h2 {
-      margin-bottom: 14px;
-      font-size: 1.5em;
+      margin-bottom: 10px;
+      font-size: 1.3em;
       background: linear-gradient(to right, #00ffc3, #00cba9, #00ffc3);
       background-size: 200% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: gradient-text 5s linear infinite;
     }
-  
+
     @keyframes gradient-text {
       to { background-position: 200% center; }
     }
-  
+
     .card p {
-      font-size: 0.95em;
+      font-size: 0.9em;
       color: #bbb;
-      margin: 8px 0 18px;
+      margin: 6px 0 16px;
     }
-  
+
     .button {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 8px 16px;
       background: linear-gradient(135deg, #00ffc3, #009688);
       color: #000;
-      border-radius: 12px;
+      border-radius: 10px;
       font-weight: 600;
-      font-size: 1em;
+      font-size: 0.95em;
       text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
       transition: all 0.25s ease-in-out;
       box-shadow: 0 0 8px rgba(0, 255, 179, 0.25);
     }
-  
+
     .card:hover .button {
       background: linear-gradient(135deg, #00e6b2, #007d71);
       box-shadow: 0 0 14px rgba(0, 255, 179, 0.5);
       transform: scale(1.05);
     }
-  
-    .emoji {
-      font-size: 1.3em;
-      margin-right: 5px;
-    }
-  
+
     @media (max-width: 500px) {
-      .card {
-        padding: 24px 18px;
-      }
-  
       .card h2 {
-        font-size: 1.3em;
+        font-size: 1.2em;
       }
-  
+
       .button {
-        font-size: 0.95em;
-        padding: 10px 18px;
+        font-size: 0.9em;
+        padding: 8px 14px;
       }
     }
   </style>
-  
 </head>
 <body>
 
-  <a href="/" class="card" target="_blank">
-    <h2>🤖 WhatsApp Bot Panel</h2>
-    <p>🚀 Manage your hosted WhatsApp bot in one click!</p>
-    <div class="button">💻 Open Panel</div>
-  </a>
+  <div class="container">
+    <a href="/" class="card" target="_blank">
+      <h2>🤖 WhatsApp Bot Panel</h2>
+      <p>🚀 Manage your hosted WhatsApp bot in one click!</p>
+      <div class="button">💻 Open Panel</div>
+    </a>
 
-  <a href="https://t.me/vipbotwa_bot" class="card" target="_blank">
-    <h2>👑 Telegram VIP Bot</h2>
-    <p>💬 Premium power — secretly grab OneView content in one tap.</Video></p>
-    <div class="button">🌟 Start VIP Access</div>
-  </a>
+    <a href="https://t.me/vipbotwa_bot" class="card" target="_blank">
+      <h2>👑 Telegram VIP Bot</h2>
+      <p>💬 Premium power — secretly grab OneView content in one tap.</p>
+      <div class="button">🌟 Start VIP Access</div>
+    </a>
 
-  <a href="https://t.me/host_cryptalis_bot" class="card" target="_blank">
-    <h2>📲 WhatsApp Bot Rental</h2>
-    <p>📞 Need WA bots? Rent them now!</p>
-    <div class="button">📦 Rent Nebula</div>
-  </a>
+    <a href="https://t.me/host_cryptalis_bot" class="card" target="_blank">
+      <h2>📲 WhatsApp Bot Rental</h2>
+      <p>📞 Need WA bots? Rent them now!</p>
+      <div class="button">📦 Rent Nebula</div>
+    </a>
 
-  <a href="https://t.me/fnbots_bot" class="card" target="_blank">
-    <h2>🎮 Fortnite Bot Rental</h2>
-    <p>🚀 Dominate the island with FN bots!</p>
-    <div class="button">💼 Rent Bot</div>
-  </a>
-
+    <a href="https://t.me/fnbots_bot" class="card" target="_blank">
+      <h2>🎮 Fortnite Bot Rental</h2>
+      <p>🚀 Dominate the island with FN bots!</p>
+      <div class="button">💼 Rent Bot</div>
+    </a>
+  </div>
 
 </body>
 </html>
