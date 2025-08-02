@@ -1,0 +1,14 @@
+{
+  "name": "coderxsa-custom-import",
+  "version": "1.0.0",
+  "description": "Download and extract GitHub repos by URL",
+  "main": "github-clone.js",
+  "scripts": {
+    "start": ""
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "fs-extra": "^11.2.0",
+    "adm-zip": "^0.5.9"
+  }
+}
