@@ -5,7 +5,7 @@ const AdmZip = require("adm-zip");
 
 // --- USER SETUP ---
 // ❗ Enter GitHub repo URL (NOT .git, NOT zip)
-const repo_url = "https://github.com/coderxsa/PRE-INSTALLED"; // ✅ Example repo || https://github.com/coderxsa/NEBULA
+const repo_url = "https://github.com/coderxsa/NEBULA"; // ✅ Example repo || https://github.com/coderxsa/NEBULA
 
 // Validate URL
 if (!repo_url.startsWith("https://github.com/")) {
